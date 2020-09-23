@@ -12,8 +12,13 @@ class BudgetsController < ApplicationController
 
   def create
     render json: Budget.create(budget_params)
-    
   end 
+
+  def update
+    budget = Budget.find_by(id: params[:id])
+    budget.update(budget_params)
+    render json: budget
+  end
 
   def delete
     budget = Budget.find_by(id: params[:id])
