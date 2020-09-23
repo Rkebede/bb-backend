@@ -11,7 +11,7 @@ class BudgetsController < ApplicationController
   end 
 
   def create
-    render json: Budget.create(budget_params)
+    render json: Budget.create(budget_params), include: [:expenses]
   end 
 
   def update
