@@ -21,8 +21,7 @@ class BudgetsController < ApplicationController
   end
 
   def delete
-    budget = Budget.find_by(id: params[:id])
-    budget.destroy
+    Budget.delete_all
   end 
 
 end
