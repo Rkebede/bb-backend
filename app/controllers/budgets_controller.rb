@@ -10,9 +10,21 @@ class BudgetsController < ApplicationController
     render json: budget
   end 
 
+  def create
+    render json: Budget.create(budget_params)
+    
+  end 
+
   def delete
     budget = Budget.find_by(id: params[:id])
     budget.destroy
   end 
 
+end
+
+
+private 
+
+def budget_params
+  params.require(:budget).permit(:income)
 end
