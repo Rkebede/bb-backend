@@ -7,17 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
-10.times do 
-  Budget.create(income: Faker::Number.between(from:1500, to:3000)) 
-end  
+Budget.create(income: Faker::Number.between(from:1500, to:3000)) 
+Budget.create(income: Faker::Number.between(from:1500, to:3000)) 
 
 Expense.create(name: Faker::Company.name, budget_id: 1, amount: Faker::Number.between(from:1, to:1000))
 Expense.create(name: Faker::Company.name, budget_id: 2, amount: Faker::Number.between(from:1, to:1000))
-Expense.create(name: Faker::Company.name, budget_id: 3, amount: Faker::Number.between(from:1, to:1000))
-Expense.create(name: Faker::Company.name, budget_id: 4, amount: Faker::Number.between(from:1, to:1000))
-Expense.create(name: Faker::Company.name, budget_id: 5, amount: Faker::Number.between(from:1, to:1000))
-Expense.create(name: Faker::Company.name, budget_id: 6, amount: Faker::Number.between(from:1, to:1000))
-Expense.create(name: Faker::Company.name, budget_id: 7, amount: Faker::Number.between(from:1, to:1000))
-Expense.create(name: Faker::Company.name, budget_id: 8, amount: Faker::Number.between(from:1, to:1000))
-Expense.create(name: Faker::Company.name, budget_id: 9, amount: Faker::Number.between(from:1, to:1000))
-Expense.create(name: Faker::Company.name, budget_id: 10, amount: Faker::Number.between(from:1, to:1000))
