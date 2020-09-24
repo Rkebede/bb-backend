@@ -21,7 +21,7 @@ class BudgetsController < ApplicationController
   end
 
   def delete
-    Budget.delete_all
+    Budget.destroy_all
   end 
 
 end

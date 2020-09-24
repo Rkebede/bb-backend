@@ -22,8 +22,8 @@ ActiveRecord::Schema.define(version: 2020_09_22_210154) do
   end
 
   create_table "expenses", force: :cascade do |t|
-    t.text "name"
-    t.bigint "budget_id", null: false
+    t.string "name"
+    t.bigint "budget_id"
     t.integer "amount"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
