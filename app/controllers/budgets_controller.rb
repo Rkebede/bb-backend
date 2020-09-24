@@ -20,7 +20,7 @@ class BudgetsController < ApplicationController
     render json: budget
   end
 
-  def delete
+  def destroy
     Budget.destroy_all
   end 
 
