@@ -1,7 +1,7 @@
 class BudgetsController < ApplicationController
 
   def index
-    budgets = Budget.all
+    budgets = Budget.order(:id)
     render json: budgets, include: [:expenses]
   end 
 
