@@ -16,8 +16,10 @@ class BudgetsController < ApplicationController
 
   def update
     budget = Budget.find_by(id: params[:id])
-    budget.update(budget_params)
-    render json: budget
+    if budget 
+      budget.update(budget_params)
+      render json: budget
+    end 
   end
 
   def destroy
